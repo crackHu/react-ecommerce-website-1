@@ -98,3 +98,18 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 ### License
 
 This project is licensed under the MIT License.
+
+## 切换本地开发与 Vercel 调试的 proxy 字段
+
+本项目提供了自动切换 client/package.json 里 proxy 字段的脚本：
+
+- 本地开发 server 时，需添加 proxy 字段：
+  ```
+  python switch-proxy.py add-proxy
+  ```
+- 使用 vercel dev 或部署到 Vercel 时，需移除 proxy 字段：
+  ```
+  python switch-proxy.py remove-proxy
+  ```
+
+运行脚本后再启动对应服务即可。
